@@ -1,0 +1,11 @@
+.circle {
+    height: 50px;
+    width: 50px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+ul li {
+    list-style-type: none;
+}
