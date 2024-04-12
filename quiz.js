@@ -86,7 +86,7 @@ let katakana = [
           randomCharacter.forEach(kata => {
               question += kata.Katakana;
           });
-          document.getElementById("question").innerText = "Enter the romaji reading for: " + question;
+          document.getElementById("question").innerText = question;
           document.getElementById("answer").value = ""; // Clear previous answer
           document.getElementById("questionNumber").innerText = "Question " + questionCount + " of 10";
       } else {
@@ -98,6 +98,8 @@ let katakana = [
       let userInput = document.getElementById("answer").value.trim();
       if (userInput === "") {
           document.getElementById("result").innerText = "Please provide an answer";
+          document.getElementById("result").style.color = "red";
+          document.getElementById("result").style.fontWeight = "700";
           return;
       }
       let correctReading = "";
@@ -108,15 +110,24 @@ let katakana = [
       let resultDiv = document.getElementById("result");
       if (result) {
           resultDiv.innerText = "Correct!";
+          resultDiv.style.color = "green";
+          resultDiv.style.fontWeight = "700";
           correctCount++;
       } else {
           resultDiv.innerText = "Incorrect!";
+          resultDiv.style.color = "red";
+          resultDiv.style.fontWeight = "700";
       }
       displayQuestion();
   }
 
   function showScore() {
       document.getElementById("question").innerText = "Quiz finished! Your score: " + correctCount + " out of 10";
+      document.getElementById("question").style.fontSize = "30px"
+      document.getElementById("go_back_to").innerText = "Go back to:";
+      document.getElementById("go_back_front").innerHTML = "<a href='index.html'>Front Page</a>";
+      document.getElementById("go_back_katakana").innerHTML = "<a href='katakana_list.html'>Katakana List</a>";
+      document.getElementById("submit_answer").style.display = "none";
       document.getElementById("answer").style.display = "none";
       document.getElementById("result").style.display = "none";
       document.getElementById("questionNumber").innerText = ""; // Hide question number

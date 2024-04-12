@@ -98,11 +98,7 @@ let katakana = [
 
 
   let radicals = [
-    { name: "Monte Santos", height: 1658, place: "Parco Foreste Casentinesi" },
-    { name: "Monte Falterona", height: 1654, place: "Parco Foreste Casentinesi" },
-    { name: "Poggio Scali", height: 1520, place: "Parco Foreste Casentinesi" },
-    { name: "Pratomagno", height: 1592, place: "Parco Foreste Casentinesi" },
-    { name: "Monte Amiata", height: 1738, place: "Siena" }
+    { Radical: "一", Romaji: "ichi", Meaning: "one" }
   ];
 
   function generateTableHead(table, data) {

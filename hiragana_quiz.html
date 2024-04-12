@@ -7,7 +7,7 @@
     <title>KakuLearner | Front Page</title>
 </head>
 
-<body id="hiragana_quiz_page">
+<body id="katakana_quiz_page">
     <div class="container">
         <div class="header">
             <div class="logo">
@@ -28,12 +28,23 @@
             <img src="origami.png" width="250px">
         </div>
         <div class="content">
-            <h1>Katakana Quiz</h1>
-            <div id="question"></div>
-            <input type="text" id="answer" placeholder="Type your answer">
-            <button onclick="checkAnswer()">Submit</button>
-            <div id="result"></div>
-            <div id="questionNumber"></div>
+            <div class="quiz">
+                <h2>How can you read these hiragana characters?</h2>
+                <div class="middle-quiz">
+                    <div id="question"></div>
+                    <input type="text" id="answer" placeholder="Type your answer">
+                </div>
+                <div class="quiz-results">
+                    <div id="questionNumber"></div>
+                    <div id="result"></div>
+                    <button id="submit_answer" onclick="checkAnswer()">Submit</button>
+                </div>
+                <div class="go_back">
+                    <div id="go_back_to"></div>
+                    <div id="go_back_front" class="go"></div>
+                    <div id="go_back_hiragana" class="go"></div>
+                </div>
+            </div>
         </div>
         <div class="footer">
                  
@@ -41,7 +52,7 @@
                     
         </div>
     </div>
-    <script src="quiz.js"></script>
+    <script src="quiz_hiragana.js"></script>
 </body>
 
 </html>
