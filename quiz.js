@@ -46,22 +46,6 @@ let katakana = [
     { Katakana: "ヲ", Romaji: 'wo' },
     { Katakana: "ン", Romaji: 'n' }
   ];
-
-  let page = document.body.id;
-
-  let table;
-
-  switch (page) {
-    case 'hiragana-quiz':
-        table = hiragana;
-        break;
-    case 'katakana-quiz':
-        table = katakana;
-        break;
-    case 'radicals-quiz':
-        table = radicals;
-        break;
-  }
  
   let randomCharacter;
   let questionCount = 0;
@@ -87,7 +71,7 @@ let katakana = [
               question += kata.Katakana;
           });
           document.getElementById("question").innerText = question;
-          document.getElementById("answer").value = ""; // Clear previous answer
+          document.getElementById("answer").value = "";
           document.getElementById("questionNumber").innerText = "Question " + questionCount + " of 10";
       } else {
           showScore();
@@ -130,7 +114,7 @@ let katakana = [
       document.getElementById("submit_answer").style.display = "none";
       document.getElementById("answer").style.display = "none";
       document.getElementById("result").style.display = "none";
-      document.getElementById("questionNumber").innerText = ""; // Hide question number
+      document.getElementById("questionNumber").innerText = ""; 
   }
 
   displayQuestion();

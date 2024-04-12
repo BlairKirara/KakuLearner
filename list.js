@@ -113,9 +113,9 @@ let katakana = [
   }
   
   function generateTable(table, data) {
-    let tbody = table.createTBody(); // Create tbody
+    let tbody = table.createTBody(); 
     for (let element of data) {
-        let row = tbody.insertRow(); // Insert rows into tbody
+        let row = tbody.insertRow(); 
         for (key in element) {
             let cell = row.insertCell();
             let text = document.createTextNode(element[key]);
